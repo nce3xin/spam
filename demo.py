@@ -129,7 +129,9 @@ if MODEL=='CNN':
 else:
     if hyperparams.CNN_mapping:
         train_loader,test_loader,train_dataset,test_dataset=load_cnn_dense()
-        writeToFile('data/ftrs/'+MODEL+'_ftrs.csv',train_loader.dataset)
+        #writeToFile('data/ftrs/'+MODEL+'_ftrs.csv',train_loader.dataset)
+        writeToFile('data/ftrs/train/'+'CNN_outdims='+str(hyperparams.cnn_out_dims)+'_&origin'+'_ftrs.csv',train_loader.dataset)
+        writeToFile('data/ftrs/test/'+'CNN_outdims='+str(hyperparams.cnn_out_dims)+'_&origin'+'_ftrs.csv',test_loader.dataset)
     else:
         train_loader,test_loader,train_dataset,test_dataset=load_temporal_data('data/gen/train.csv','data/gen/test.csv',hyperparams.normalization)
 

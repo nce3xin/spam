@@ -38,7 +38,8 @@ def load_model(pt):
     return model
 
 # load CNN model
-CNN_model_pt='models_saved/CNN_cuda_epoch=90_outdims=25.pth'
+cnn_out_dims=hyperparams.cnn_out_dims
+CNN_model_pt='models_saved/CNN_cuda_epoch=90_outdims='+str(cnn_out_dims)+'.pth'
 #CNN_model_pt='models_saved/CNN_cpu_epoch=6_outdims=5.pth'
 
 if hyperparams.MODEL!='CNN' and hyperparams.CNN_mapping:
