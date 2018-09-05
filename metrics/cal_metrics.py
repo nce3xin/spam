@@ -7,7 +7,7 @@ Created on Thu Jul  5 19:18:25 2018
 from sklearn import metrics
 
 # true label and predicted label file
-file_pt='../testset_results/GRU.csv'
+file_pt='../testset_results/MLP.csv'
 
 # TPR equals recall
 def TPR(category):

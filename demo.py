@@ -15,7 +15,7 @@ from loaddata.load_dataset import load_2d_data_for_CNN
 from loaddata.load_dataset import load_cnn_dense,load_temporal_data
 from models import model_MLP,model_two_stage,model_RNN_LSTM_GRU,model_CNN
 import matplotlib as mpl
-#mpl.use('Agg')
+mpl.use('Agg')
 import matplotlib.pyplot as plt
 import pandas as pd
 
