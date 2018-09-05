@@ -5,9 +5,11 @@ Created on Thu Jul  5 19:18:25 2018
 @author: nce3xin
 """
 from sklearn import metrics
+import pandas as pd
+from pycm import *
 
 # true label and predicted label file
-file_pt='../testset_results/MLP.csv'
+file_pt='../testset_results/RNN.csv'
 
 # TPR equals recall
 def TPR(category):
@@ -106,6 +108,13 @@ def accuracy():
     total=len(true)
     return correct/total
 
+def multiclass_confusion_matrix():
+    df=pd.read_csv(file_pt)
+    labels=df['true label'].values.tolist()
+    preds=df['predicted label'].values.tolist()
+    cm = ConfusionMatrix(actual_vector=labels, predict_vector=preds) # Create CM From Data
+    print(cm)
+    
 acc=accuracy()
 print('acc={:.3f}'.format(acc))
 print()
@@ -125,3 +134,5 @@ for category in range(3):
     print('recall={:.3f}'.format(r))
     print('f1={:.3f}'.format(f1))
     print('auc={:.3f}'.format(auc))
+    
+multiclass_confusion_matrix()

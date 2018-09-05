@@ -5,3 +5,9 @@
 
 ### Epoch从40到60的准确率曲线（LSTM模型）
 - 曲线图保存在accuracy v.s. epoch(40-60)/LSTM文件夹下。
+
+### 分类别性能和混淆矩阵
+- 保存在performance文件夹下。
+
+### Requirements
+[Multi-class confusion matrix library](https://github.com/sepandhaghighi/pycm)
