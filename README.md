@@ -9,5 +9,8 @@
 ### 分类别性能和混淆矩阵
 - 保存在performance文件夹下。
 
+### CNN不同输出维度对应的loss figures (emf格式)
+- 保存在 losses_figures/CNN_different_outputDim 文件夹下。
+
 ### Requirements
 [Multi-class confusion matrix library](https://github.com/sepandhaghighi/pycm)
